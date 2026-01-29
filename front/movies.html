@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./styles/bootstrap.css" />
+  <link rel="stylesheet" href="./styles/reset.css" />
+  <link rel="stylesheet" href="./styles/index.css" />
+
+  <title>Movies | 112PELIS </title>
+</head>
+
+<body>
+  <header class="navbar navbar-expand-lg">
+    <img src="./assets/Captura de pantalla 2026-01-29 085957.png" alt="Tomas Martinez" />
+
+    <nav class="navbar-nav-wrapper">
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="./movies.html">Movies</a></li>
+        <li class="nav-item"><a class="nav-link" href="./lastest.html">Lastest News</a></li>
+        <li class="nav-item"><a class="nav-link" href="./createMovies.html">Create Movie</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="movies-page">
+
+    <section class="page-hero">
+      <h1 class="page-title">Catálogo de películas</h1>
+      <p class="page-subtitle">
+        Elegí una, dale play y después no digas que no avisamos cuando se te hicieron las 3 am.
+      </p>
+
+      <div class="movies-toolbar">
+
+        <input
+          id="SearchInput"
+          class="movies-search"
+          type="search"
+          placeholder="Buscar por título, director o año…"
+          autocomplete="off"
+        />
+
+        <div class="movies-filters">
+          <button class="chip chip--active" data-filter="all">🎬 Todas</button>
+          <button class="chip" data-filter="top">⭐ Mejor puntuadas</button>
+          <button class="chip" data-filter="new">🕒 Últimos estrenos</button>
+        </div>
+
+        <div class="movies-sort">
+          <label class="sort-label" for="SortSelect">Ordenar:</label>
+          <select id="SortSelect" class="sort-select">
+            <option value="newest">Más nuevas</option>
+            <option value="oldest">Más viejas</option>
+            <option value="rate_desc">Mejor rating</option>
+            <option value="rate_asc">Peor rating</option>
+            <option value="title_asc">A → Z</option>
+            <option value="title_desc">Z → A</option>
+          </select>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="movies-section">
+      <article id="MoviesContainer" class="movies-grid"></article>
+    </section>
+
+  </main>
+
+  <script src="./scripts/tempData.js"></script>
+  <script src="./scripts/movies.js"></script>
+</body>
+</html>
+
+
+
